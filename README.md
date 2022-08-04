@@ -22,7 +22,7 @@ git cms-merge-topic lathomas:L1Prefiring_M
 
 mkdir ExoAnalysis
 cd ExoAnalysis
-git clone https://github.com/UMN-CMS/WR-lite.git WR_lite
+git clone https://github.com/UMN-CMS/WR-charge-flip.git
 cd ..
 cd ..
 scram b -j32
@@ -37,7 +37,7 @@ source /local/grid/cmssoft/cms/cmsset_default.sh
 cd /path_to_working_area/CMSSW_10_4_0_patch1/src/
 cmsenv
 cd ExoAnalysis/WR-lite
-cmsRun python/cfg.py outputFile=out.root trainFile=NNdata.csv
+cmsRun python/cfg.py outputFile=out.root trainFile=data.csv
 ```
 
 *Training the neural net*
@@ -51,6 +51,8 @@ python3 NN_framework.py --in_path 'data.csv' --neurons 1024 --activation relu --
 Activation functions and optimizers can be found int he tensorflow documentation. A timestamped model from the training will be saved and can be reloaded for use in the sign flip analysis.
 
 *sign flip analysis*
+
+to generate histograms and obtain charge flip rates for electrons and muons, and example configuration is shown below. 
 
 ```
 python3 sign_analysis.py --in_path 'data.csv' --scale_path 'count.csv' --model_path 'models/recent_model'
