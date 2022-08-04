@@ -42,7 +42,7 @@ cmsRun python/cfg.py outputFile=out.root trainFile=data.csv
 
 *Training the neural net*
 
-This is all the work from the repository which is done in the CMSSW environment. The rest is done in a seperate python 3.6 environment with up to date (as of August 2022) installations of tensorflow, matplotlib, and numpy. To run train the neural network and generate histograms of the network performance, an example conmfiguration is shown below:
+The above is all the work from the repository which is done in the CMSSW environment. The rest is done in a seperate python 3.6 environment with up to date (as of August 2022) installations of tensorflow, matplotlib, and numpy. The scripts are found in the /misc directory. To train the neural network and generate histograms of the network performance, an example configuration is shown below:
 
 ```
 python3 NN_framework.py --in_path 'data.csv' --neurons 1024 --activation relu --optimizer adam --dense_layers 2 --train --epochs 100
