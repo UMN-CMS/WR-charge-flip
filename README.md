@@ -30,7 +30,7 @@ scram b -j32
 
 *Basic Use*
 
-To run the analysis on some WR signal events:
+To run the analysis on ttbar background monte carlo:
 
 ```
 source /local/grid/cmssoft/cms/cmsset_default.sh
