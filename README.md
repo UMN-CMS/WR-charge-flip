@@ -43,7 +43,7 @@ data.csv in this case would be a csv file of kinematic variables for the physics
 
 *Training the neural net*
 
-The above is all the work from the repository which is done in the CMSSW environment. The rest is done in a seperate python 3.6 environment with up to date (as of August 2022) installations of tensorflow, matplotlib, and numpy. The scripts are found in the /misc directory. To train the neural network to predict the muon pT in dilepton ttbar events and generate histograms of the network performance, an example configuration is shown below:
+The above is all the work from the repository which is done in the CMSSW environment. The rest is done in a seperate python 3.6 environment with up to date (as of August 2022) installations of tensorflow, matplotlib, and numpy. The scripts are found in the /misc directory. To train the neural network to predict the muon pT in dilepton ttbar events and generate histograms of the network performance, an example configuration is shown below (paths to the data file must be changed):
 
 ```
 python3 NN_framework.py --in_path 'data.csv' --neurons 1024 --activation relu --optimizer adam --dense_layers 2 --train --epochs 100
@@ -53,7 +53,7 @@ Activation functions and optimizers can be found int he tensorflow documentation
 
 *sign flip analysis*
 
-to generate histograms and obtain charge flip rates for electrons and muons, and example configuration is shown below. Currently, electron charge flip rates must be known to extract the muon charge flip rate using this method. Electron charge flip rates from [CMS AN-18-280](https://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2018_280_v7.pdf) are hardcoded into the script, but currently do not agree with the observed electron charge flip rates seen in ttbar monte carlo for this analysis. Histograms comparaing the observed and expected electron charge flip rates in this analysis are also generated from the following script:
+to generate histograms and obtain charge flip rates for electrons and muons, and example configuration is shown below. Currently, electron charge flip rates must be known to extract the muon charge flip rate using this method. Electron charge flip rates from [CMS AN-18-280](https://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2018_280_v7.pdf) are hardcoded into the script, but currently do not agree with the observed electron charge flip rates seen in ttbar monte carlo for this analysis. Histograms comparaing the observed and expected electron charge flip rates in this analysis are also generated from the following script (all paths must be changed to the specific locations and names of your files, the model path should point to a folder containing the tensorflow model assets):
 
 ```
 python3 sign_analysis.py --in_path 'data.csv' --scale_path 'count.csv' --model_path 'models/recent_model'
