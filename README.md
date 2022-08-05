@@ -53,7 +53,7 @@ Activation functions and optimizers can be found int he tensorflow documentation
 
 *sign flip analysis*
 
-to generate histograms and obtain charge flip rates for electrons and muons, and example configuration is shown below. Currently, electron charge flip rates must be known to extract the muon charge flip rate using this method. Electron charge flip rates from [CMS AN-18-280](https://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2018_280_v7.pdf) are hardcoded into the script, but currently do not match the observed electron charge flip rates seen in ttbar monte carlo for this analysis. Histograms comparaing the observed and expected electron charge flip rates in this analysis are also generated from the following script:
+to generate histograms and obtain charge flip rates for electrons and muons, and example configuration is shown below. Currently, electron charge flip rates must be known to extract the muon charge flip rate using this method. Electron charge flip rates from [CMS AN-18-280](https://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2018_280_v7.pdf) are hardcoded into the script, but currently do not agree with the observed electron charge flip rates seen in ttbar monte carlo for this analysis. Histograms comparaing the observed and expected electron charge flip rates in this analysis are also generated from the following script:
 
 ```
 python3 sign_analysis.py --in_path 'data.csv' --scale_path 'count.csv' --model_path 'models/recent_model'
