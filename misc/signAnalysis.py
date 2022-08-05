@@ -11,7 +11,7 @@ import argparse
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='sign analysis options')
     parser.add_argument('--in_path', type=str, default='neuralNetDataTT_full_sum.csv', help='path to the csv input file')
-    parser.add_argument('--scale_path', type=str, default='count.csv', help='path to the csv file that counted events for scaling purposes')
+    parser.add_argument('--scale_path', type=str, default=None, help='path to the csv file that counted events for scaling purposes')
     parser.add_argument('--model_path', type=str, default='runs/reco/2022-06-10_0904/models/fullModel', help='path to the NN model to load')
 
     args = parser.parse_args()
@@ -26,8 +26,11 @@ if __name__ == '__main__':
 
     myData = processingData.processingData()
     dataset = myData.csvProcess(args.in_path, config=3)
-
-    scaleFactor = myData.getSF(args.scale_path)
+    
+    if args.scale_path is None:
+        scaleFactor = 1
+    else:
+        scaleFactor = myData.getSF(args.scale_path)
     print('scale factor is ' + str(scaleFactor))
 
     Model = keras.models.load_model(args.model_path)
