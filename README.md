@@ -39,7 +39,7 @@ cmsenv
 cd ExoAnalysis/WR-lite
 cmsRun python/cfg.py outputFile=out.root trainFile=data.csv
 ```
-data.csv in this case would be a csv file of kinematic variables for the physics objects in the ttbar events at the gen and reco level. These will be used to train a neural network to predict the pT of the muon in the ttbar decay.
+data.csv in this case would be a csv file of kinematic variables for the physics objects in the ttbar events at the gen and reco level. These will be used to train a neural network to predict the pT of the muon in the ttbar decay. Additionally, the analyzer creates a csv file "count.csv" that keeps track of how many events were ran over before cuts and can be used directly as input for scaling the sign analysis results to 2018 data.
 
 *Training the neural net*
 
