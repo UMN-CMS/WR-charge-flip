@@ -49,7 +49,7 @@ The above is all the work from the repository which is done in the CMSSW environ
 python3 NN_framework.py --in_path 'data.csv' --neurons 1024 --activation relu --optimizer adam --dense_layers 2 --train --epochs 100
 ```
 
-Activation functions and optimizers can be found int he tensorflow documentation. A time-stamped model from the training will be saved and can be reloaded for use in the sign flip analysis.
+Activation functions and optimizers can be found in the tensorflow documentation. A time-stamped model from the training will be saved and can be reloaded for use in the sign flip analysis.
 
 *sign flip analysis*
 
