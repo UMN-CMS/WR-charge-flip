@@ -54,7 +54,7 @@ Activation functions and optimizers can be found in the tensorflow documentation
 Neural net hyperparameters can be optimized using a genetic algorithm script located in the misc directory. The script generates, trains, and tests neural nets algorithmically with varying hyperparameters. The script is hard coded to generate a population of 20 networks that compete over 10 generations. Networks from subsequent generations inherit features (optimizer, number of layers, number of neurons, activation function) from the best performing networks of the previous generation. The script can be run by passing the path of the input data csv file which is the output data from the CMSSW analyzer:
 
 ```
-python3 geneticMain.py --inpath data.csv
+python3 geneticMain.py --in_path data.csv
 ```
 
 *sign flip analysis*
