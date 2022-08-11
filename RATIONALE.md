@@ -29,7 +29,7 @@ In order to estimate this irreducible background, rates of electron and muon cha
 The Z mass peak is smeared out for same sign *Z→μ,μ* events due to the less accurately reconstructed muon transverse momentum in the cases of misreconstructed charge. This project aims to use new strategies to estimate the muon charge misidentification rate with the goal of being more accurate in the determination of muon transverse momentum for charge flipped events.
 
 
-### Neural Network approach
+## Neural Network approach
 
 The strategy for estimating the rate of muon charge misidentification as a function of *p<sub>T</sub>* involves the analysis of *tt̅* events rather than DY events. The *tt̅* process can be effectively selected in data utilizing the fact that the top quarks decay to b quark jets which are identifiable from kinematic observables related to the *b* decay process via *b*-tagging. For the measurement, we then use events where the *tt̅* decay to an electron, a muon, two *b*-jets, and two neutrinos. The muon *p<sub>T</sub>* distributions for same sign lepton charge *tt̅* events can be compared to the total muon *p<sub>T</sub>* distribution to extract the muon charge misidentification rate as a function of muon *p<sub>T</sub>*. 
 
