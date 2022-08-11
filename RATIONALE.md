@@ -35,7 +35,7 @@ The strategy for estimating the rate of muon charge misidentification as a funct
 
 We assume that, due to the nature of the muon detection system and track reconstruction process, muons with the incorrectly reconstructed charge will also be prone to inaccurate *p<sub>T</sub>* reconstruction. This requires the development of an alternate method of determining muon *p<sub>T</sub>*. Various methods of regression using kinematic variables of the jets and outgoing particles of the *tt̅* decay were explored, and a dense neural network (DNN) acheived the best results. 
 
-<center>
+<div align="center">
 
 |       | mean absolute error (muon p<sub>T</sub> GeV) |
 | ----------- | ----------- |
@@ -43,7 +43,7 @@ We assume that, due to the nature of the muon detection system and track reconst
 | electron p<sub>T</sub>   | 92.10        |
 | multivariate linear | 64.45        |
 
-</center>  
+</div>  
   
 There are many possible configuration of DNN hyperparameters which include the number of dense or dropout layers, dropout rate, optimizer, activation function, and network width (number of neurons per layer). The large hyper parameter space was explored using a genetic algorithm to generate random configurations and set them to "compete" against each other. A default configuration of 1024 neurons, 2 dense layers, two dropout layers, the ADAM optimizer, and ReLu activation function were chosen based on the performance of this configuration in the aforementioned genetic algorithm run. The migration plots shown below (unormalized on the left and normalized on the right) demonstrate how varying one of these hyperparameters, the network width, can affect the overall performance. This procedure can be performed again for different sets of physics parameters as training inputs to the networks. 
 
