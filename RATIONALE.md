@@ -2,13 +2,13 @@
 
 ## Physics Background
 
-###Signal
+### Signal
 
 The signal model for this *W<sub>r</sub>* search assumes a final *lljj* state. A *W<sub>r</sub>* is produced and decays into a *N<sub>r</sub>*, which produces two quarks mediated by a virtual *W<sub>r</sub>*. The quarks hadronize into two jets and the leptons at the *N<sub>r</sub>* vertices are constrained to be the same flavor. Given the assumed majorana nature of the *N<sub>r</sub>*, it will rapidly oscillate and between neutrino and anti-neutrino states and consequently the lepton charge at the second *N<sub>r</sub>* vertex would be uncorrelated with the charge of the other lepton.
 
 ![signal](figs/signal.png)
 
-###Backgrounds
+### Backgrounds
 
 The two primary backgrounds in this analysis are Drell-Yan (DY) process with additional jets and *tt̅* production. The DY process results in oppositely charged same flavor leptons mediated by a virtual photon or *Z* boson created by the annihilation of a quark and anti-quark. Additional quarks from the collision may hadronize in the detector and create jets. The other primary background, *tt̅* production, starts with a top (*t*) and anti-top (*t̅*) quark being produced which decay to neutrinos and oppositely charged leptons each through an intermediate *W* boson. There is no constraint on the flavor of the leptons in the case of *tt̅* production, and a bottom and anti-bottom quark from the decay of each top hadronize to create additional jets.
 
